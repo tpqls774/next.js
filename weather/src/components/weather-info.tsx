@@ -1,6 +1,6 @@
 
 export async function getWeather(id: string) {
-    const API_KEY = process.env.API_KEY
+    const API_KEY = process.env.NEXT_PUBLIC_API_KEY
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${id}&appid=${API_KEY}`);
         if (!response.ok) throw new Error("날씨 정보를 불러오는데 실패하였습니다.");
